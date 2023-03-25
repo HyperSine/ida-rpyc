@@ -14,7 +14,7 @@ An IDA plugin that allows you call IDA python APIs from remote.
 
 3. Open IDA. Select `Edit` -> `Plugins` -> `IDA-RPyC`. A windows would pop up:
    
-   ![pic0.png](assets/pic0.png)
+   <img src="assets/pic0.png" width="400"/>
 
 4. You can choose direct or SSL mode. Once parameters are set, you can click `Start` to start an RPyC server.
 
