@@ -173,6 +173,7 @@ class IdaRPyCPluginForm(idaapi.PluginForm):
         else:
             raise RuntimeError('Unexpected!')
 
+        self._tab_main.setEnabled(False)
         self._button_start_stop_cancel.button(QtWidgets.QDialogButtonBox.StandardButton.Yes).setEnabled(False)
         self._button_start_stop_cancel.button(QtWidgets.QDialogButtonBox.StandardButton.No).setEnabled(True)
         self._button_start_stop_cancel.button(QtWidgets.QDialogButtonBox.StandardButton.Cancel).setEnabled(False)
@@ -186,6 +187,7 @@ class IdaRPyCPluginForm(idaapi.PluginForm):
 
         print('IDA-RPyC: Server has stopped')
 
+        self._tab_main.setEnabled(True)
         self._button_start_stop_cancel.button(QtWidgets.QDialogButtonBox.StandardButton.Yes).setEnabled(True)
         self._button_start_stop_cancel.button(QtWidgets.QDialogButtonBox.StandardButton.No).setEnabled(False)
         self._button_start_stop_cancel.button(QtWidgets.QDialogButtonBox.StandardButton.Cancel).setEnabled(True)
